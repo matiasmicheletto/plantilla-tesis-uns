@@ -1,0 +1,106 @@
+\documentclass[12pt,a4paper,titlepage]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[printwatermark]{xwatermark}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{lipsum}
+\usepackage{setspace}
+\usepackage{eso-pic}
+\usepackage{multirow}
+\usepackage{hhline}
+\usepackage[cmex10]{amsmath}
+\usepackage{multicol}
+\usepackage{blindtext}
+\usepackage{array}
+\usepackage{mdwmath}
+\usepackage{mdwtab}
+\usepackage[tight,footnotesize]{subfig}
+\usepackage{fixltx2e}
+\usepackage{url}
+\usepackage{flushend}
+\usepackage{graphicx}
+\usepackage{algorithm2e}
+\usepackage{algpseudocode}
+\usepackage{tikz}
+\usepackage{multirow,booktabs}
+\usepackage{listings}
+\usepackage{subfiles} 
+\usepackage{rotating}
+
+\selectlanguage{spanish}
+
+\oddsidemargin 0.0in \evensidemargin 0.0in \textwidth 6.5in
+\headheight 0.0in \topmargin 0.0in \textheight=9.0in
+
+% Marca de agua para borrador
+%\newwatermark[allpages,color=gray!50,angle=45,scale=2,xpos=0,ypos=0]{BORRADOR}
+
+\usetikzlibrary{calc}
+
+% Pagina en blanco
+\newcommand{\blankpage}{
+    \clearpage
+    \thispagestyle{empty}
+    \mbox{}
+    \clearpage
+}
+\newtheorem{myconj}{Conjetura}
+\renewcommand{\algorithmcfname}{Algoritmo}
+\renewcommand{\tablename}{Tabla}
+
+\SetAlFnt{\small\sf}
+\SetKwProg{Fn}{Function}{:}{}
+
+\title{Tesis de Doctor en Ingeniería}
+\author{Nombre y Apellido}
+ 
+
+\begin{document}
+
+%%%%% PORTADA %%%%%%
+
+\input{tapa}
+\blankpage
+
+\input{portada}
+\blankpage
+
+\pagestyle{plain}
+\pagenumbering{Roman}
+\setcounter{page}{3}
+
+\input{prefacio}
+\blankpage
+
+\input{agradecimientos}
+\blankpage
+
+\input{resumen}
+
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+\tableofcontents
+
+\pagenumbering{arabic}
+
+
+%%%% CONTENIDO %%%%%%
+
+
+\input{intro.tex}
+
+
+%%%%% BIBLIO %%%%%%
+
+\bibliographystyle{unsrt}
+
+\bibliography{biblio.bib}
+
+
+\end{document}
+
